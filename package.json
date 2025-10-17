@@ -1,0 +1,31 @@
+{
+  "name": "llm-code-deployment",
+  "version": "1.0.0",
+  "description": "LLM-powered code deployment system for automated app building, deployment, and evaluation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/student/server.js",
+    "dev": "nodemon src/student/server.js",
+    "instructor:round1": "python scripts/instructor/round1.py",
+    "instructor:round2": "python scripts/instructor/round2.py",
+    "instructor:evaluate": "python scripts/instructor/evaluate.py",
+    "instructor:api": "python scripts/instructor/evaluation_api.py",
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "keywords": ["llm", "deployment", "automation", "github-pages", "code-generation"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1",
+    "octokit": "^3.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0"
+  }
+}

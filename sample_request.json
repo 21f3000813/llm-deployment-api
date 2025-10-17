@@ -1,0 +1,20 @@
+{
+  "email": "student@example.com",
+  "secret": "your-secret-key-here",
+  "task": "sum-of-sales-a1b2c",
+  "round": 1,
+  "nonce": "550e8400-e29b-41d4-a716-446655440000",
+  "brief": "Publish a single-page site that fetches data.csv from attachments, sums its sales column, sets the title to 'Sales Summary test123', displays the total inside #total-sales, and loads Bootstrap 5 from jsdelivr.",
+  "checks": [
+    "document.title === 'Sales Summary test123'",
+    "!!document.querySelector(\"link[href*='bootstrap']\")",
+    "Math.abs(parseFloat(document.querySelector('#total-sales').textContent) - 15250.50) < 0.01"
+  ],
+  "evaluation_url": "http://localhost:8000/api/notify",
+  "attachments": [
+    {
+      "name": "data.csv",
+      "url": "data:text/csv;base64,cHJvZHVjdCxzYWxlcwpMYXB0b3AsMTIwMC41MApQaG9uZSw4MDAuMDAKVGFibGV0LDQ1MC4wMApNb25pdG9yLDMwMC4wMApLZXlib2FyZCwxNTAuMDAKTW91c2UsNTAuMDAKSGVhZHBob25lcywyMDAuMDAKV2ViY2FtLDEwMC4wMApTcGVha2VycywyMDAuMDAKUHJpbnRlciwxMjgwMC4wMA=="
+    }
+  ]
+}
