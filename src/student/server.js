@@ -11,8 +11,12 @@ const PORT = process.env.STUDENT_API_PORT || 3000;
 // Middleware
 app.use(express.json({ limit: '50mb' })); // Support large attachments
 
-// Health check endpoint
+// Health check endpoints
 app.get('/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+app.get('/healthz', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
